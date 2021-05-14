@@ -47,7 +47,15 @@ Public Class frmMCERemote
 
         Try
 
+            ' MsgBox("A key was pressed")
+
             Dim sMCECode As String = ""
+
+            If LoadFrom = LoadFrom Then
+
+                MsgBox("Another key was pressed: " & LoadFrom)
+
+            End If
 
 
             If LoadFrom = "FormLoad" Then
@@ -191,7 +199,7 @@ Public Class frmMCERemote
                                 Me.dgvMCE.Rows(j).Cells(8).Style.BackColor = Color.White
                             End If
 
-                            
+
                         End If
 
 
@@ -641,7 +649,7 @@ Public Class frmMCERemote
             Me.dgvMCE.Rows(RowIndex).Cells(8).Style.BackColor = Color.White
         End If
 
-        
+
     End Sub
 
 
@@ -889,7 +897,7 @@ Public Class frmMCERemote
         Return (modifier + IIf(modifier = "", "", "+")) + SelectedKey
     End Function
 
-   
+
 
     Private Sub btnOpenRegistryEditor_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnOpenRegistryEditor.Click
         Try
@@ -898,5 +906,9 @@ Public Class frmMCERemote
         Catch ex As Exception
 
         End Try
+    End Sub
+
+    Private Sub btnTest_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnTest.Click
+        MsgBox("Test button pressed")
     End Sub
 End Class

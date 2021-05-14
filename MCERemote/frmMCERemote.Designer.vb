@@ -29,14 +29,6 @@ Partial Class frmMCERemote
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMCERemote))
         Me.dgvMCE = New System.Windows.Forms.DataGridView()
-        Me.btnApply = New System.Windows.Forms.Button()
-        Me.btnILoadSavedMCE = New System.Windows.Forms.Button()
-        Me.btnSaveMCEToFile = New System.Windows.Forms.Button()
-        Me.btnLoadOriginalMCE = New System.Windows.Forms.Button()
-        Me.btnLoadMCEFromRegistry = New System.Windows.Forms.Button()
-        Me.btnLoadBackupMCE = New System.Windows.Forms.Button()
-        Me.btnRestoreBackupMCE = New System.Windows.Forms.Button()
-        Me.btnOpenRegistryEditor = New System.Windows.Forms.Button()
         Me.ButtonID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ButtonName = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Image = New System.Windows.Forms.DataGridViewImageColumn()
@@ -49,6 +41,15 @@ Partial Class frmMCERemote
         Me.ByteCode = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MessageType = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.OldKeyStroke = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.btnApply = New System.Windows.Forms.Button()
+        Me.btnILoadSavedMCE = New System.Windows.Forms.Button()
+        Me.btnSaveMCEToFile = New System.Windows.Forms.Button()
+        Me.btnLoadOriginalMCE = New System.Windows.Forms.Button()
+        Me.btnLoadMCEFromRegistry = New System.Windows.Forms.Button()
+        Me.btnLoadBackupMCE = New System.Windows.Forms.Button()
+        Me.btnRestoreBackupMCE = New System.Windows.Forms.Button()
+        Me.btnOpenRegistryEditor = New System.Windows.Forms.Button()
+        Me.btnTest = New System.Windows.Forms.Button()
         CType(Me.dgvMCE, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -73,86 +74,6 @@ Partial Class frmMCERemote
         Me.dgvMCE.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvMCE.Size = New System.Drawing.Size(1070, 734)
         Me.dgvMCE.TabIndex = 0
-        '
-        'btnApply
-        '
-        Me.btnApply.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnApply.Location = New System.Drawing.Point(1110, 478)
-        Me.btnApply.Name = "btnApply"
-        Me.btnApply.Size = New System.Drawing.Size(136, 40)
-        Me.btnApply.TabIndex = 7
-        Me.btnApply.Text = "Apply To Registry"
-        Me.btnApply.UseVisualStyleBackColor = True
-        '
-        'btnILoadSavedMCE
-        '
-        Me.btnILoadSavedMCE.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnILoadSavedMCE.Location = New System.Drawing.Point(1110, 166)
-        Me.btnILoadSavedMCE.Name = "btnILoadSavedMCE"
-        Me.btnILoadSavedMCE.Size = New System.Drawing.Size(136, 40)
-        Me.btnILoadSavedMCE.TabIndex = 3
-        Me.btnILoadSavedMCE.Text = "Load Saved MCE"
-        Me.btnILoadSavedMCE.UseVisualStyleBackColor = True
-        '
-        'btnSaveMCEToFile
-        '
-        Me.btnSaveMCEToFile.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSaveMCEToFile.Location = New System.Drawing.Point(1110, 420)
-        Me.btnSaveMCEToFile.Name = "btnSaveMCEToFile"
-        Me.btnSaveMCEToFile.Size = New System.Drawing.Size(136, 40)
-        Me.btnSaveMCEToFile.TabIndex = 6
-        Me.btnSaveMCEToFile.Text = "Save to File"
-        Me.btnSaveMCEToFile.UseVisualStyleBackColor = True
-        '
-        'btnLoadOriginalMCE
-        '
-        Me.btnLoadOriginalMCE.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLoadOriginalMCE.Location = New System.Drawing.Point(1110, 106)
-        Me.btnLoadOriginalMCE.Name = "btnLoadOriginalMCE"
-        Me.btnLoadOriginalMCE.Size = New System.Drawing.Size(136, 40)
-        Me.btnLoadOriginalMCE.TabIndex = 2
-        Me.btnLoadOriginalMCE.Text = "Load Original MCE"
-        Me.btnLoadOriginalMCE.UseVisualStyleBackColor = True
-        '
-        'btnLoadMCEFromRegistry
-        '
-        Me.btnLoadMCEFromRegistry.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLoadMCEFromRegistry.Location = New System.Drawing.Point(1110, 46)
-        Me.btnLoadMCEFromRegistry.Name = "btnLoadMCEFromRegistry"
-        Me.btnLoadMCEFromRegistry.Size = New System.Drawing.Size(136, 40)
-        Me.btnLoadMCEFromRegistry.TabIndex = 1
-        Me.btnLoadMCEFromRegistry.Text = "Load From Registry"
-        Me.btnLoadMCEFromRegistry.UseVisualStyleBackColor = True
-        '
-        'btnLoadBackupMCE
-        '
-        Me.btnLoadBackupMCE.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLoadBackupMCE.Location = New System.Drawing.Point(1110, 224)
-        Me.btnLoadBackupMCE.Name = "btnLoadBackupMCE"
-        Me.btnLoadBackupMCE.Size = New System.Drawing.Size(136, 40)
-        Me.btnLoadBackupMCE.TabIndex = 4
-        Me.btnLoadBackupMCE.Text = "Load Backup MCE"
-        Me.btnLoadBackupMCE.UseVisualStyleBackColor = True
-        '
-        'btnRestoreBackupMCE
-        '
-        Me.btnRestoreBackupMCE.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnRestoreBackupMCE.Location = New System.Drawing.Point(1110, 365)
-        Me.btnRestoreBackupMCE.Name = "btnRestoreBackupMCE"
-        Me.btnRestoreBackupMCE.Size = New System.Drawing.Size(136, 40)
-        Me.btnRestoreBackupMCE.TabIndex = 5
-        Me.btnRestoreBackupMCE.Text = "Restore From Backup"
-        Me.btnRestoreBackupMCE.UseVisualStyleBackColor = True
-        '
-        'btnOpenRegistryEditor
-        '
-        Me.btnOpenRegistryEditor.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnOpenRegistryEditor.Location = New System.Drawing.Point(1110, 612)
-        Me.btnOpenRegistryEditor.Name = "btnOpenRegistryEditor"
-        Me.btnOpenRegistryEditor.Size = New System.Drawing.Size(136, 40)
-        Me.btnOpenRegistryEditor.TabIndex = 8
-        Me.btnOpenRegistryEditor.Text = "Open Registry Editor"
-        Me.btnOpenRegistryEditor.UseVisualStyleBackColor = True
         '
         'ButtonID
         '
@@ -247,11 +168,101 @@ Partial Class frmMCERemote
         Me.OldKeyStroke.Name = "OldKeyStroke"
         Me.OldKeyStroke.Visible = False
         '
+        'btnApply
+        '
+        Me.btnApply.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnApply.Location = New System.Drawing.Point(1110, 478)
+        Me.btnApply.Name = "btnApply"
+        Me.btnApply.Size = New System.Drawing.Size(136, 40)
+        Me.btnApply.TabIndex = 7
+        Me.btnApply.Text = "Apply To Registry"
+        Me.btnApply.UseVisualStyleBackColor = True
+        '
+        'btnILoadSavedMCE
+        '
+        Me.btnILoadSavedMCE.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnILoadSavedMCE.Location = New System.Drawing.Point(1110, 166)
+        Me.btnILoadSavedMCE.Name = "btnILoadSavedMCE"
+        Me.btnILoadSavedMCE.Size = New System.Drawing.Size(136, 40)
+        Me.btnILoadSavedMCE.TabIndex = 3
+        Me.btnILoadSavedMCE.Text = "Load Saved MCE"
+        Me.btnILoadSavedMCE.UseVisualStyleBackColor = True
+        '
+        'btnSaveMCEToFile
+        '
+        Me.btnSaveMCEToFile.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSaveMCEToFile.Location = New System.Drawing.Point(1110, 420)
+        Me.btnSaveMCEToFile.Name = "btnSaveMCEToFile"
+        Me.btnSaveMCEToFile.Size = New System.Drawing.Size(136, 40)
+        Me.btnSaveMCEToFile.TabIndex = 6
+        Me.btnSaveMCEToFile.Text = "Save to File"
+        Me.btnSaveMCEToFile.UseVisualStyleBackColor = True
+        '
+        'btnLoadOriginalMCE
+        '
+        Me.btnLoadOriginalMCE.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLoadOriginalMCE.Location = New System.Drawing.Point(1110, 106)
+        Me.btnLoadOriginalMCE.Name = "btnLoadOriginalMCE"
+        Me.btnLoadOriginalMCE.Size = New System.Drawing.Size(136, 40)
+        Me.btnLoadOriginalMCE.TabIndex = 2
+        Me.btnLoadOriginalMCE.Text = "Load Original MCE"
+        Me.btnLoadOriginalMCE.UseVisualStyleBackColor = True
+        '
+        'btnLoadMCEFromRegistry
+        '
+        Me.btnLoadMCEFromRegistry.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLoadMCEFromRegistry.Location = New System.Drawing.Point(1110, 46)
+        Me.btnLoadMCEFromRegistry.Name = "btnLoadMCEFromRegistry"
+        Me.btnLoadMCEFromRegistry.Size = New System.Drawing.Size(136, 40)
+        Me.btnLoadMCEFromRegistry.TabIndex = 1
+        Me.btnLoadMCEFromRegistry.Text = "Load From Registry"
+        Me.btnLoadMCEFromRegistry.UseVisualStyleBackColor = True
+        '
+        'btnLoadBackupMCE
+        '
+        Me.btnLoadBackupMCE.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLoadBackupMCE.Location = New System.Drawing.Point(1110, 224)
+        Me.btnLoadBackupMCE.Name = "btnLoadBackupMCE"
+        Me.btnLoadBackupMCE.Size = New System.Drawing.Size(136, 40)
+        Me.btnLoadBackupMCE.TabIndex = 4
+        Me.btnLoadBackupMCE.Text = "Load Backup MCE"
+        Me.btnLoadBackupMCE.UseVisualStyleBackColor = True
+        '
+        'btnRestoreBackupMCE
+        '
+        Me.btnRestoreBackupMCE.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRestoreBackupMCE.Location = New System.Drawing.Point(1110, 365)
+        Me.btnRestoreBackupMCE.Name = "btnRestoreBackupMCE"
+        Me.btnRestoreBackupMCE.Size = New System.Drawing.Size(136, 40)
+        Me.btnRestoreBackupMCE.TabIndex = 5
+        Me.btnRestoreBackupMCE.Text = "Restore From Backup"
+        Me.btnRestoreBackupMCE.UseVisualStyleBackColor = True
+        '
+        'btnOpenRegistryEditor
+        '
+        Me.btnOpenRegistryEditor.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnOpenRegistryEditor.Location = New System.Drawing.Point(1110, 612)
+        Me.btnOpenRegistryEditor.Name = "btnOpenRegistryEditor"
+        Me.btnOpenRegistryEditor.Size = New System.Drawing.Size(136, 40)
+        Me.btnOpenRegistryEditor.TabIndex = 8
+        Me.btnOpenRegistryEditor.Text = "Open Registry Editor"
+        Me.btnOpenRegistryEditor.UseVisualStyleBackColor = True
+        '
+        'btnTest
+        '
+        Me.btnTest.Location = New System.Drawing.Point(1110, 303)
+        Me.btnTest.Name = "btnTest"
+        Me.btnTest.Size = New System.Drawing.Size(75, 23)
+        Me.btnTest.TabIndex = 9
+        Me.btnTest.Text = "Test"
+        Me.btnTest.UseVisualStyleBackColor = True
+        '
         'frmMCERemote
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1370, 734)
+        Me.ClientSize = New System.Drawing.Size(1336, 734)
+        Me.Controls.Add(Me.btnTest)
         Me.Controls.Add(Me.btnOpenRegistryEditor)
         Me.Controls.Add(Me.btnRestoreBackupMCE)
         Me.Controls.Add(Me.btnLoadBackupMCE)
@@ -291,5 +302,6 @@ Partial Class frmMCERemote
     Friend WithEvents ByteCode As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents MessageType As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents OldKeyStroke As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents btnTest As System.Windows.Forms.Button
 
 End Class
