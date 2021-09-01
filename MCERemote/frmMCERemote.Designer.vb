@@ -50,6 +50,7 @@ Partial Class frmMCERemote
         Me.btnRestoreBackupMCE = New System.Windows.Forms.Button()
         Me.btnOpenRegistryEditor = New System.Windows.Forms.Button()
         Me.btnTest = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.dgvMCE, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -257,11 +258,22 @@ Partial Class frmMCERemote
         Me.btnTest.Text = "Test"
         Me.btnTest.UseVisualStyleBackColor = True
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label1.Location = New System.Drawing.Point(1110, 13)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(41, 15)
+        Me.Label1.TabIndex = 10
+        Me.Label1.Text = "Label1"
+        '
         'frmMCERemote
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1336, 734)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnTest)
         Me.Controls.Add(Me.btnOpenRegistryEditor)
         Me.Controls.Add(Me.btnRestoreBackupMCE)
@@ -274,11 +286,13 @@ Partial Class frmMCERemote
         Me.Controls.Add(Me.dgvMCE)
         Me.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.KeyPreview = True
         Me.Name = "frmMCERemote"
         Me.Text = "Advanced MCE Remote Mapper by baijuxavior"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.dgvMCE, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents dgvMCE As System.Windows.Forms.DataGridView
@@ -303,5 +317,6 @@ Partial Class frmMCERemote
     Friend WithEvents MessageType As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents OldKeyStroke As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents btnTest As System.Windows.Forms.Button
+    Friend WithEvents Label1 As System.Windows.Forms.Label
 
 End Class

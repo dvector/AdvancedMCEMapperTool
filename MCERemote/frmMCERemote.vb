@@ -26,6 +26,33 @@ Public Class frmMCERemote
 
 
 
+
+
+
+    ' Public Declare Function GetAsyncKeyState Lib "user32" Alias "GetAsyncKeyState" (ByVal vKey As Long) As Integer
+
+    ' Public Declare Function GetAsyncKeyState Lib "user32" (ByVal vKey As Integer) As Integer
+
+    'Public Function GetKeyState(ByVal Key1 As Integer, Optional ByVal Key2 As Integer = -1, Optional ByVal Key3 As Integer = -1) As Boolean
+    '    Dim s As Short
+    '    s = GetAsyncKeyState(Key1)
+    '    If s = 0 Then Return False
+    '    If Key2 > -1 Then
+    '        s = GetAsyncKeyState(Key2)
+    '        If s = 0 Then Return False
+    '    End If
+    '    If Key3 > -1 Then
+    '        s = GetAsyncKeyState(Key3)
+    '        If s = 0 Then Return False
+    '    End If
+    '    Return True
+    'End Function
+
+
+    ' -----------------------------------------------------------------------------------
+
+
+
     Private Sub frmMCERemote_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Try
             Me.dgvMCE.ColumnHeadersDefaultCellStyle.Font = New System.Drawing.Font("Segoe UI", 9, System.Drawing.FontStyle.Bold)
@@ -47,13 +74,12 @@ Public Class frmMCERemote
 
         Try
 
-            ' MsgBox("A key was pressed")
-
             Dim sMCECode As String = ""
 
             If LoadFrom = LoadFrom Then
 
-                MsgBox("Another key was pressed: " & LoadFrom)
+                ' MsgBox("Button pressed: " & LoadFrom)
+                Label1.Text = " " & LoadFrom
 
             End If
 
@@ -909,6 +935,36 @@ Public Class frmMCERemote
     End Sub
 
     Private Sub btnTest_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnTest.Click
-        MsgBox("Test button pressed")
+        LoadMCEKey("MyTestMCE")
     End Sub
+
+    Private Sub Label1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label1.Click
+
+    End Sub
+
+
+
+
+    ' Atempt to observe all keyboard events on the form
+    '
+    '
+    '
+    Private Sub frmMCERemote_KeyDown(ByVal sender As Object, ByVal e As KeyEventArgs) Handles MyBase.KeyDown
+        If e.Control AndAlso e.KeyCode = Keys.S Then
+            ' Call your sub method here
+
+
+            ' then prevent the key to reach the current control
+            e.Handled = False
+        End If
+
+        Label1.Text = "[" & e.KeyCode & "] " & e.KeyData & " " & e.KeyValue & " " & e.Modifiers
+
+        ' MsgBox("Key pressed")
+
+        ' System.Console.WriteLine(e)
+
+    End Sub
+
+
 End Class

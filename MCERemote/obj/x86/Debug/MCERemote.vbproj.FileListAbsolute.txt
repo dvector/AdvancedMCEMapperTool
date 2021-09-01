@@ -1,1 +1,9 @@
 W:\_htdocs\dev.git\AdvancedMCEMapperTool\MCERemote\obj\x86\Debug\AdvancedMCERemoteMapper.exe
+W:\_htdocs\dev.git\AdvancedMCEMapperTool\MCERemote\bin\Release\AdvancedMCERemoteMapper.exe
+W:\_htdocs\dev.git\AdvancedMCEMapperTool\MCERemote\bin\Release\AdvancedMCERemoteMapper.pdb
+W:\_htdocs\dev.git\AdvancedMCEMapperTool\MCERemote\bin\Release\AdvancedMCERemoteMapper.xml
+W:\_htdocs\dev.git\AdvancedMCEMapperTool\MCERemote\obj\x86\Debug\AdvancedMCERemoteMapper.frmMCERemote.resources
+W:\_htdocs\dev.git\AdvancedMCEMapperTool\MCERemote\obj\x86\Debug\AdvancedMCERemoteMapper.Resources.resources
+W:\_htdocs\dev.git\AdvancedMCEMapperTool\MCERemote\obj\x86\Debug\MCERemote.vbproj.GenerateResource.Cache
+W:\_htdocs\dev.git\AdvancedMCEMapperTool\MCERemote\obj\x86\Debug\AdvancedMCERemoteMapper.xml
+W:\_htdocs\dev.git\AdvancedMCEMapperTool\MCERemote\obj\x86\Debug\AdvancedMCERemoteMapper.pdb
